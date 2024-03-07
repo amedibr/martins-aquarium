@@ -3,64 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fish Information</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        main {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-        }
-
-        section {
-            flex: 1;
-            margin-right: 20px;
-        }
-
-        aside {
-            flex: 1;
-        }
-    </style>
+    <title>Martin's Aquarium</title>
 </head>
 <body>
     <header>
-        <h1>Fish Information</h1>
+        <h1 class="header">Martin's Aquarium</h1>
     </header>
 
     <main>
-        <section>
-            <h2>Fish List</h2>
-            <ul>
-                <li>Goldfish</li>
-                <li>Betta Fish</li>
-                <li>Angelfish</li>
-                <!-- Add more fish -->
-            </ul>
-        </section>
+        <section class="fishlist">
+              <!--  <div class="fishlist__image" img="" src=""></div>
+                <div class="fishlist__name"></div>
+                <div class="fishlist__species"></div>
+                <div class="fishlist__length"></div>
+                <div class="fishlist__location"></div>
+                <div class="fishlist__diet"></div> -->
+        </section> 
 
-        <section>
-            <h2>Quotes</h2>
-            <blockquote>
+        <section class="side">
+            <div class="side__quotes">
+            <h2 class="side__quotes--header">Quotes</h2>
+            <p>
                 "Fish are friends, not food." - Finding Nemo
-            </blockquote>
+            </p>
+            </div>  
             <!-- Add more quotes -->
         </section>
 
-        <section>
-            <h2>Harvesting Locations</h2>
+        <section class="side__locations">
+            <h2 class="side__locations--header">Harvesting Locations</h2>
             <ul>
                 <li>Local Rivers</li>
                 <li>Seafood Markets</li>
@@ -68,8 +39,8 @@
             </ul>
         </section>
 
-        <section>
-            <h2>Fish/Tank Care Tips</h2>
+        <section class="side__cleaning">
+            <h2 class="side__cleaning--header">Fish/Tank Care Tips</h2>
             <ul>
                 <li>Keep the tank clean and well-filtered.</li>
                 <li>Monitor water temperature regularly.</li>
@@ -77,5 +48,6 @@
             </ul>
         </section>
     </main>
+    <script type="module" src="./scripts/main.js"></script> <!--YOU WILL WRITE THIS EVERY TIME FOR IMPORTING MODULES TO HTML-->
 </body>
 </html>

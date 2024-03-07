@@ -1,0 +1,10 @@
+.FishList{
+    flex-direction: row;
+}
+
+.image--card {
+
+    height: 200px;
+    width: 200px;
+
+}
