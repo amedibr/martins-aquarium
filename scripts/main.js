@@ -1,8 +1,14 @@
-import { FishList } from './FistList.js'
+import { FishList } from './fish.js'
 import { getFish } from './database.js'
+import { tankTips } from './database.js'
+import { TipList } from './tips.js'
 
-
+const tankClean = tankTips()
 const allFish = getFish()
+
+for (const tips of tankClean) {
+    console.log(tips)
+}
 
 for (const fish of allFish) {
     console.log(fish)
@@ -16,6 +22,8 @@ for (const fish of allFish) {
     Use # for elements with an "id" attribute
  */
 const parentHTMLElement = document.querySelector(".fishlist")
+const coparentHTMLElement= document.querySelector(".side__cleaning")
 
 
 parentHTMLElement.innerHTML = FishList()
+coparentHTMLElement.innerHTML = TipList()

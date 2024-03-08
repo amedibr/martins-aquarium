@@ -21,7 +21,7 @@ const database = {
             species: "is a fish",
             name: "Lloyd",
             food: "French Fries",
-            length: 4.5,
+            length: 5,
             location: "Atlantic Ocean",
         },
         {
@@ -39,7 +39,7 @@ const database = {
             species: "is a fish",
             name: "Arnold",
             food: "Hot Dog",
-            length: 4,
+            length: 3,
             location: "Pacific Ocean",
         },
         {
@@ -48,7 +48,7 @@ const database = {
             species: "is a fish",
             name: "Frank",
             food: "Tacos",
-            length: 1,
+            length: 2,
             location: "Atlantic Ocean",
         },
         {
@@ -57,7 +57,7 @@ const database = {
             species: "is a fish",
             name: "Lenny",
             food: "Spaghetti",
-            length: 3.5,
+            length: 3,
             location: "Indian Ocean",
         },
         {
@@ -66,7 +66,7 @@ const database = {
             species: "is a fish",
             name: "Arthur",
             food: "Vegetarian",
-            length: 10,
+            length: 15,
             location: "Atlantic Ocean",
         },
         {
@@ -81,7 +81,65 @@ const database = {
     ]
 }
 
+const tankCareTips = {
+        tips:[
+    {
+      title: "Regular Water Changes",
+      description: "Perform regular water changes to maintain water quality in the aquarium."
+    },
+    {
+      title: "Proper Feeding",
+      description: "Feed your fish the right amount of food and avoid overfeeding to prevent water pollution."
+    },
+    {
+      title: "Monitor Water Parameters",
+      description: "Regularly check and maintain proper water parameters such as pH, temperature, and ammonia levels."
+    },
+    {
+      title: "Clean the Filter",
+      description: "Clean or replace the aquarium filter regularly to ensure efficient filtration."
+    },
+    ]
+}
 
 export const getFish = () => {
     return database.fish.map(fish => ({...fish}))
+}
+
+export const tankTips = () => {
+    return tankCareTips.tips.map(tips => ({...tips}))
+}
+
+export const mostHolyFish = () => {
+    // 3, 6, 9, 12, etc... fish
+    const holyFish = []
+
+    for (let holy of database.fish) {
+        if (holy.length % 6 === 3)
+            holyFish.push(holy)
+    }
+
+    return holyFish
+}
+
+export const soldierFish = () => {
+    // 5, 10, 15, 20, 25, etc... fish
+    const soldiers = []
+
+    for (let fighter of database.fish) {
+        if (fighter.length % 15 === 5)
+            soldiers.push(fighter)
+    }
+    return soldiers
+}
+
+export const nonHolyFish = () => {
+    // Any fish not a multiple of 3 or 5
+    const heretic = []
+
+    for (let unholy of database.fish) {
+        if (unholy.length % 2 === 0)
+            heretic.push(unholy)
+    }
+    return heretic
 }
