@@ -110,6 +110,10 @@ export const tankTips = () => {
     return tankCareTips.tips.map(tips => ({...tips}))
 }
 
+export const fishLocation = () => {
+    return database.fish.map(fish => ({...fish}))
+}
+
 export const mostHolyFish = () => {
     // 3, 6, 9, 12, etc... fish
     const holyFish = []
